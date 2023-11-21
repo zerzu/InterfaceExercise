@@ -50,6 +50,7 @@ namespace InterfaceExercise
             taurus.Name = "Ford";
             taurus.IsConvertible = false;
             taurus.TrunkSize = 10;
+            taurus.UsesFuel = true;
 
             Truck s10 = new Truck();
 
@@ -61,6 +62,7 @@ namespace InterfaceExercise
             s10.Name = "Ford";
             s10.IsFWD = true;
             s10.BedSize = "Short";
+            s10.UsesFuel = true;
 
             SUV durango = new SUV();
 
@@ -72,7 +74,7 @@ namespace InterfaceExercise
             durango.Name = "Dodge";
             durango.HasThirdRow = true;
             durango.IsCrossover = true;
-
+            durango.UsesFuel = false;
 
             //Creatively display and organize their values  !!DONE!!
 
@@ -82,18 +84,18 @@ namespace InterfaceExercise
                 {
                     if (vehicle is Car)
                     {
-                        Console.WriteLine($"This Car is a {vehicle.Color} {vehicle.Engine} {vehicle.Model}");                        
+                        Console.WriteLine($"This Car is a {vehicle.Color} {vehicle.Engine} {vehicle.Model} {vehicle.FuelType(vehicle.UsesFuel)}");                        
                     }
                     else if (vehicle is Truck)
                     {
-                        Console.WriteLine($"This Truck is a {vehicle.Color} {vehicle.Engine} {vehicle.Model}");                        
-                    }
+                        Console.WriteLine($"This Truck is a {vehicle.Color} {vehicle.Engine} {vehicle.Model} {vehicle.FuelType(vehicle.UsesFuel)}");
+                }
                     else if (vehicle is SUV)
                     {
 
-                    Console.WriteLine($"This SUV is a {vehicle.Color} {vehicle.Engine} {vehicle.Model}");
+                    Console.WriteLine($"This SUV is a {vehicle.Color} {vehicle.Engine} {vehicle.Model} {vehicle.FuelType(vehicle.UsesFuel)}");
 
-                    }
+                }
 
                     
                 }

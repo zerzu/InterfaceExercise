@@ -16,5 +16,6 @@ namespace InterfaceExercise
         public string Name { get; set; }    
         public bool IsConvertible { get; set; }
         public int TrunkSize { get; set; }
+        public bool UsesFuel { get; set; }
     }
 }
